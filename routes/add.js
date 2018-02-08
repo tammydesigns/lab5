@@ -2,7 +2,6 @@ var data = require("../data.json");
 
 exports.addFriend = function(req, res) {    
 	// Your code goes here
-	res.render('add');
 	var name = req.query.name;
     var dscpt = req.query.description;
     var image = 'http://lorempixel.com/400/400/people';
@@ -12,6 +11,7 @@ exports.addFriend = function(req, res) { 
 		"imageURL": image
 	}
 	data["friends"].push(newFriend);
+	res.render('index',data);
 
 
  }

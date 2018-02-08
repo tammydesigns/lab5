@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	    $(".name").click(function (e) {
         var name = $(this).text();
-        console.log('> ' + name);
+        console.log('update name: ' + name);
         $(this).text(anagrammedName(name));
         e.preventDefault();
     });
